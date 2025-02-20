@@ -361,31 +361,36 @@
         <h2>Contact Us</h2>
         <div class="title-underline"></div>
     </div>
-
     <div class="contact-container">
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="aaaa1511-ba12-4482-8802-9f2b15cf4ab0">
+            
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <div class="form-group">
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" required>
                 <label for="name">Name</label>
             </div>
 
             <div class="form-group">
-                <input type="text" id="rollNumber" required>
+                <input type="text" id="rollNumber" name="roll_number" required>
                 <label for="rollNumber">Roll Number</label>
             </div>
 
             <div class="form-group">
-                <input type="text" id="department" required>
+                <input type="text" id="department" name="department" required>
                 <label for="department">Department</label>
             </div>
 
             <div class="form-group">
-                <input type="tel" id="contact" required>
+                <input type="tel" id="contact" name="contact_number" required>
                 <label for="contact">Contact Number</label>
             </div>
 
             <div class="form-group">
-                <textarea id="message" required></textarea>
+                <textarea id="message" name="message" required></textarea>
                 <label for="message">Message</label>
             </div>
 
@@ -393,7 +398,6 @@
         </form>
     </div>
 </section>
-
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-container">
