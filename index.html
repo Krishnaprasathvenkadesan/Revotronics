@@ -197,7 +197,7 @@
                 </div>
                 <div class="event-card technical">
                     <h4>Drone Workshop</h4>
-                    <p>Technical hackathon</p>
+                    <p>Drone Workshop</p>
                     <a href="events/drone.html" class="event-cta">
                         Explore More
                         <i class="fas fa-arrow-right"></i>
@@ -206,7 +206,7 @@
                 <div class="event-card technical">
                     <h4>Revothon</h4>
                     <p>Technical treasure hunt</p>
-                    <a href="/events/revotron.html" class="event-cta">
+                    <a href="events/revotron.html" class="event-cta">
                         Explore More
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -363,29 +363,35 @@
     </div>
 
     <div class="contact-container">
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="aaaa1511-ba12-4482-8802-9f2b15cf4ab0">
+            
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <div class="form-group">
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" required>
                 <label for="name">Name</label>
             </div>
 
             <div class="form-group">
-                <input type="text" id="rollNumber" required>
+                <input type="text" id="rollNumber" name="roll_number" required>
                 <label for="rollNumber">Roll Number</label>
             </div>
 
             <div class="form-group">
-                <input type="text" id="department" required>
+                <input type="text" id="department" name="department" required>
                 <label for="department">Department</label>
             </div>
 
             <div class="form-group">
-                <input type="tel" id="contact" required>
+                <input type="tel" id="contact" name="contact_number" required>
                 <label for="contact">Contact Number</label>
             </div>
 
             <div class="form-group">
-                <textarea id="message" required></textarea>
+                <textarea id="message" name="message" required></textarea>
                 <label for="message">Message</label>
             </div>
 
